@@ -23,4 +23,4 @@ jobs:
 
       - name: Run Python script
         run: |
-          python numberguessgame.py   # Change this to your script name
+          python hello.py   # Change this to your script name

@@ -23,4 +23,4 @@ jobs:
 
       - name: Run Python script
         run: |
-          python exception handling.py   # Change this to your script name
+          python numberguessgame.py   # Change this to your script name

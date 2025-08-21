@@ -1,0 +1,26 @@
+name: Run Python Program
+
+on:
+  push:                # Run whenever you push code
+    branches: [ "main" ]  # or master branch
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest   # Virtual machine where it runs
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3   # Get your code
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'    # Python version you want
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || true  # If you have dependencies
+
+      - name: Run Python script
+        run: |
+          python exception handling.py   # Change this to your script name
